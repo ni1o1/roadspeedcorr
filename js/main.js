@@ -186,11 +186,11 @@ $.getJSON('data/corr/'+roadname+'_'+thistype+'.json', function (data_1) {
 var data_in = [];
         for (var i = 0; i < data_1.length; i += 1) {
 			v = osmroad[i]
-			v.value = data_1[i]*100000
+			v.value = data_1[i]*10000
 			data_in.push(v)
 			}
-				vmax = Math.max(Math.max.apply(Math,data_1)*100000,
-	-Math.min.apply(Math,data_1)*100000)
+				vmax = 20
+			/*	Math.max(Math.max.apply(Math,data_1),-Math.min.apply(Math,data_1))*10000*/
 		myChart.setOption(option = {visualMap:{max:vmax*0.9,min:-vmax*0.9},
 			series:[{data:data_in},{data:[params['data']]}]
 		})
@@ -207,11 +207,11 @@ $.getJSON('data/corr/'+roadname+'_'+thistype+'.json', function (data_1) {
 var data_in = [];
         for (var i = 0; i < data_1.length; i += 1) {
 			v = osmroad[i]
-			v.value = data_1[i]*100000
+			v.value = data_1[i]*10000
 			data_in.push(v)
 			}
-				vmax = Math.max(Math.max.apply(Math,data_1)*100000,
-	-Math.min.apply(Math,data_1)*100000)
+				vmax = 20
+			/*	Math.max(Math.max.apply(Math,data_1),-Math.min.apply(Math,data_1))*/
 		myChart.setOption(option = {visualMap:{max:vmax*0.9,min:-vmax*0.9},
 			series:[{data:data_in},{data:[params['data']]}]
 		})
